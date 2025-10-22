@@ -1,1 +1,1 @@
-# DS-binary-search-tree-
+It is a binary search tree program 
