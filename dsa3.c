@@ -34,3 +34,24 @@ void createList() {
     }
 }
 
+void displayList() {
+    struct node* temp = head;
+    if (temp == NULL) {
+        printf("The list is empty.\n");
+        return;
+    }
+
+    printf("Linked List Elements: ");
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    createList();
+    displayList();
+    return 0;
+}
+

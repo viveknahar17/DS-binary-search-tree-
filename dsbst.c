@@ -85,6 +85,12 @@ void postorder(struct Node* root) {
         printf("%d ", root->data);
     }
 }
+int countNodes(struct Node* root) {
+    if (root == NULL) return 0;
+    return 1 + countNodes(root->left) + countNodes(root->right);
+}
+
+
 int main() {
     struct Node* root = NULL;
     root = insert(root, 50);
@@ -124,6 +130,8 @@ int main() {
     root = deleteNode(root, 50);
     printf("Inorder after deletion: ");
     inorder(root);
+    printf("Total nodes in BST: %d\n", countNodes(root));
+
     printf("\n");
     return 0;
 }
